@@ -146,6 +146,8 @@ function removeFirstOccurrences(str, value) {
  */
 function unbracketTag(str) {
     return str.substring(1,str.length-1);
+    //or
+    //return str.replace(/[<>]/,''); - NOT TRUE!!!!! TO RESOLVE IN FUTURE!!
 }
 
 
@@ -160,7 +162,7 @@ function unbracketTag(str) {
  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  */
 function convertToUpperCase(str) {
-    throw new Error('Not implemented');
+    return str.toUpperCase();
 }
 
 /**
@@ -174,7 +176,7 @@ function convertToUpperCase(str) {
  *   'info@gmail.com' => ['info@gmail.com']
  */
 function extractEmails(str) {
-    throw new Error('Not implemented');
+    return str.split(';');
 }
 
 /**
@@ -201,6 +203,51 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
+    let arr =new Array(1,2);
+    let str = '';
+
+    function corners(){
+        str[0] = '┌';
+        str[width-1] = '┐';
+        str[(width*(height-1))+1] = '└';
+        str[width*height-1] = '┘';
+        let x = 0;
+        let y = 0;
+        while(x){
+
+        }
+
+    }
+
+    function topBottom(arr){}
+
+    function leftRight(arr){}
+
+    // if(width===2 && height===2){
+    //     return '┌┐\n'+'└┘\n';
+    // }
+    // else{
+    //     let i,j = 0;
+    //     for(i = 0; i < height; i++){
+    //         for(j = 0; j <= width; j++){
+
+    //             if(i===0){
+    //                 if(j===0) arr[i,j] = '┌';
+    //                 if(j===width-1){ arr[i,j] = '┐'; arr[i,j+1] = '\n'; break; }
+    //             }
+    //             if(i === height-1){
+    //                 if(j===0) arr[i,j] = '┌';
+    //                 if(j===width-1){ arr[i,j] = '┐'; arr[i,j+1] = '\n'; break; }
+    //             }
+    //             if(i > 0 && i < height-1){
+    //                 if(j === width) { arr[i,j] = '\n'; };
+    //                 if(j === 0 || j === width-1) arr[i,j] = ' ';
+    //                 else arr[i,j] = '|';
+    //             }
+    //         }
+    //     }
+        
+    // }
     throw new Error('Not implemented');
 }
 
